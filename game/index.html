@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <title>Neon Rift — 2D Arcade Game</title>
+  <link rel="stylesheet" href="game.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main class="game-shell">
+    <header class="game-header">
+      <a class="back" href="../index.html">← Portfolio</a>
+      <div class="brand"><span>NEON</span> RIFT</div>
+      <button id="pauseButton" class="icon-button" type="button" aria-label="Pause game">Ⅱ</button>
+    </header>
+
+    <section class="game-layout">
+      <aside class="stats" aria-label="Game status">
+        <div class="stat"><span>SCORE</span><strong id="score">000000</strong></div>
+        <div class="stat"><span>BEST</span><strong id="best">000000</strong></div>
+        <div class="stat"><span>LEVEL</span><strong id="level">01</strong></div>
+        <div class="health-wrap"><span>HULL</span><div class="health-bar"><i id="healthBar"></i></div></div>
+      </aside>
+
+      <div class="canvas-wrap">
+        <canvas id="gameCanvas" width="960" height="540" aria-label="Neon Rift game area"></canvas>
+        <div id="overlay" class="overlay">
+          <p id="overlayKicker">SYSTEM READY</p>
+          <h1 id="overlayTitle">NEON RIFT</h1>
+          <p id="overlayText">Clear the rift. Collect energy. Survive every sector.</p>
+          <button id="startButton" type="button">Launch</button>
+        </div>
+      </div>
+
+      <aside class="mission">
+        <span>MISSION</span>
+        <h2 id="missionTitle">SECTOR 01</h2>
+        <p id="missionText">Destroy drones and gather 8 energy cores.</p>
+        <div class="progress"><i id="progressBar"></i></div>
+        <strong id="progressText">0 / 8</strong>
+      </aside>
+    </section>
+
+    <footer class="controls">
+      <span><kbd>WASD</kbd> or <kbd>ARROWS</kbd> Move</span>
+      <span><kbd>SPACE</kbd> Fire</span>
+      <span><kbd>P</kbd> Pause</span>
+    </footer>
+
+    <div class="touch-controls" aria-label="Touch controls">
+      <div class="touch-dpad">
+        <button data-key="ArrowUp" aria-label="Move up">▲</button>
+        <button data-key="ArrowLeft" aria-label="Move left">◀</button>
+        <button data-key="ArrowDown" aria-label="Move down">▼</button>
+        <button data-key="ArrowRight" aria-label="Move right">▶</button>
+      </div>
+      <button class="touch-fire" data-key="Space" aria-label="Fire">FIRE</button>
+    </div>
+  </main>
+</body>
+</html>
